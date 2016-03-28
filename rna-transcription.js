@@ -1,17 +1,22 @@
-function DnaTranscriber() {
+function DnaTranscriber() {}
 
+function translate(nucleotide) {
+    if(nucleotide === 'C') {
+        return 'G';
+    } else if (nucleotide === 'G') {
+        return 'C';
+    } else if (nucleotide === 'A') {
+        return 'U';
+    } else if (nucleotide === 'T') {
+        return 'A';
+    }
 }
-
 DnaTranscriber.prototype.toRna = function(dna) {
- if(dna === 'C') {
-     return 'G';
- } else if (dna === 'G') {
-     return 'C';
- } else if (dna === 'A') {
-     return 'U';
- } else if (dna === 'T') {
-     return 'A';
- }
+    var rna = '';
+    for(var i=0; i < dna.length; i++) {
+        rna += translate(dna[i]);
+    }
+    return rna;
 };
 
 module.exports = DnaTranscriber;
