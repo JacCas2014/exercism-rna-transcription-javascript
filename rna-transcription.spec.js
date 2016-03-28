@@ -3,7 +3,7 @@ var dnaTranscriber = new DnaTranscriber();
 
 describe('toRna()', function() {
 
-  xit('transcribes cytosine to guanine', function() {
+  it('transcribes cytosine to guanine', function() {
     expect(dnaTranscriber.toRna('C')).toEqual('G');
   });
 
