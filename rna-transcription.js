@@ -9,6 +9,8 @@ DnaTranscriber.prototype.toRna = function(dna) {
      return 'C';
  } else if (dna === 'A') {
      return 'U';
+ } else if (dna === 'T') {
+     return 'A';
  }
 };
 
